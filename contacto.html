@@ -6,28 +6,36 @@
     <meta charset="UTF-8" />
     <title>Contacto</title>
     <link rel="icon" type="image/x-icon" href="./imagenes/favicon-16x16.png" />
-    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="estilos.css" /> -->
+    <link rel="stylesheet" type="text/css" href="estilos2.css" />
 </head>
 
 <body>
 
     <header>
         <div class="encabezado">
-            <h1>Dia del libro</h1>
-            <h1>23 de abril</h1>
-        </div>
-        <nav>
-            <a href="#section1">Dia del libro</a>
-            <a href="#section2">Origen</a>
-            <a href="#section3">23 de abril</a>
-            <a href="Unidad04/LMSGIUnidad04.html">Libros recomendados</a>
-            <a href="mailto:carmengr36@educastur.es?Subject=Hola%20Carmen">Contacto</a>
-        </nav>
+            <h1>
+                <div class="titulo">
+                    <p>Día del libro</p>
+                    <p>23 de abril</p>
+                </div>
+                <img src="imagenes/libroencabezado.png" alt="Dia del libro" />
 
+            </h1>
+            <nav>
+                <a href="#section1">Día del libro</a>
+                <a href="#section2">Origen</a>
+                <a href="#section3">23 de abril</a>
+                <a href="libros.html">Libros recomendados</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
     </header>
-    <section>
-        <h2>Contacta con nosotros</h2>
-        <p>¿Quieres más recomendaciones de libros?</p>
+
+    <main>
+        <section>
+            <h2>Contacta con nosotros</h2>
+            <p>¿Quieres más recomendaciones de libros?</p>
             <form action="enviar_formulario.php" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -40,13 +48,20 @@
 
                 <button type="submit">Enviar</button>
             </form>
-    </section>
+        </section>
+    </main>
     <footer>
         <p>
             GRUPO: DAW 1º <br />
             Alumna: Carmen García Rodríguez <br />
             Correo electrónico:
             <a href="mailto:carmengr36@educastur.es?Subject=Hola%20Carmen">carmengr36@educastur.es</a> <br />
+
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="¡CSS Válido!" />
+            </a>
         </p>
 
     </footer>
