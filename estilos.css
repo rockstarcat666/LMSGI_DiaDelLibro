@@ -1,44 +1,55 @@
-*{
+* {
   margin-top: 0%;
   font-family: "Helvetica Neue", sans-serif;
 }
-body{
+
+body {
   background-image: url("imagenes/background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center center;
   color: #000;
   font-size: 1.15rem;
   line-height: 1.5;
   margin: 0px;
 }
-main{
+
+main {
   background: #fff;
   border-radius: 25px;
   padding: 3rem;
-  margin: 1rem 12rem;
+  margin: auto;
+  width: 70%;
 }
-header{
+
+header {
   width: auto;
-  background: linear-gradient(to bottom,rgba(0, 0, 0, 1) 0,rgba(0,0,0,0.68) 34%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.68) 34%, rgba(0, 0, 0, 0) 100%);
   padding: 10px;
 }
-.encabezado{
-  margin: 1rem 12rem;
+
+.encabezado {
+  margin: auto;
+  width: calc(70% + 6rem);
+  padding-bottom: 2rem;
 }
-header .titulo{
+
+header .titulo {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
 }
-header img{
+
+header img {
   width: 10rem;
 }
-header nav{
+
+header nav {
   display: flex;
   justify-content: space-between;
 }
-header nav a{
+
+header nav a {
   font-size: 1rem;
   padding: 0.6rem 1rem;
   color: black;
@@ -49,29 +60,51 @@ header nav a{
   font-weight: bold;
   cursor: pointer;
 }
-a:hover{
+
+header nav a:hover {
   background: gold;
 }
-.section1 img{
+
+.section1 img {
   width: 100%
 }
-.libros{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 1rem;
+.inicio p{
+  font-family:'Times New Roman', Times, serif;
 }
-.libros img{
-  width: 15rem;
-  height: 22rem;
+.inicio p:first-of-type::first-letter {
+	initial-letter: 3; 
+  color: goldenrod;
 }
 
-footer{
+.libros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 1rem;
+}
+  .libros article{
+    padding: 1rem;
+  }  
+  .libros article:first-child{
+    padding-left: 0;
+  }
+  .libros article:last-child{
+    padding-right: 0;
+  }
+  .libros h3{
+    height: 50px;
+  }
+  .libros img {
+    width: 100%;
+    height: 22rem;
+  }
+
+footer {
   display: flex;
   justify-content: center;
   text-align: center;
   padding-top: 5rem;
   color: #fff;
-  background: linear-gradient(to top,rgba(0, 0, 0, 1) 0,rgba(0,0,0,0.68) 34%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.68) 34%, rgba(0, 0, 0, 0) 100%);
   margin-top: 20px;
 }
 
@@ -81,15 +114,18 @@ h1 {
   text-align: center;
   margin-top: 0;
 }
+
 h2 {
   font-size: 2.6rem;
   margin: 0;
   margin-bottom: 1rem;
 }
+
 h3 {
   font-size: 1.3rem;
   margin-top: 0;
 }
+
 h4 {
   font-size: 1rem;
 }
@@ -112,7 +148,7 @@ textarea {
 }
 
 /* Estilos de los botones */
-button[type="submit"]{
+button[type="submit"] {
   padding: 0.8rem 1rem;
   background-color: #4285f4;
   color: #fff;
@@ -122,6 +158,7 @@ button[type="submit"]{
   cursor: pointer;
   width: 7rem;
 }
+
 button[type="submit"]:hover {
   background-color: #2d73e6;
 }
@@ -133,3 +170,21 @@ button[type="submit"]:hover {
   margin-bottom: 10px;
 } */
 /* Reduce nav side on mobile */
+
+@media only screen and (max-width: 768px) {
+  .libros {   
+    grid-template-columns: 1fr 1fr;
+  }
+  .libros h3{
+    height: 50px;
+    font-size: 1.5vm;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .libros {   
+    grid-template-columns: 1fr;
+  }
+  .libros h3{    
+    font-size: 1vm;
+  }
+}
