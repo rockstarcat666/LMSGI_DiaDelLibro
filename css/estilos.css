@@ -1,0 +1,239 @@
+* {
+  margin-top: 0%;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-image: url("../imagenes/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #000;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0px;
+}
+
+main {
+  background: #fff;
+  border-radius: 25px;
+  padding: 3rem;
+  margin: auto;
+  width: 70%;
+}
+/* ___________________titulos h___________________ */
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.6rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 1rem;
+}
+/* ___________________header___________________ */
+header {
+  width: auto;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.68) 34%, rgba(0, 0, 0, 0) 100%);
+  padding: 10px;
+}
+.encabezado {
+  margin: auto;
+  width: calc(70% + 6rem);
+  padding-bottom: 2rem;
+}
+header .titulo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+header img {
+  width: 10rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav a {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  color: black;
+  text-decoration: none;
+  /* border: 2px solid rgb(255, 255, 255); */
+  border-radius: 1rem;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+header nav a:hover {
+  background: gold;
+}
+  /* ___________________menu desplegable___________________ */
+
+  .menu {
+    position: relative;
+  }
+
+  .menu .dropdown{
+    position: absolute; 
+    display: none;
+    top: 42px; 
+    width: 140px;
+    left: 0;
+  }
+  .menu .dropdown a{
+    display: block;
+    background: gold;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    margin-top: 0.3rem;
+  }
+  .menu .dropdown a:hover{    
+    background: #1d1c1c;
+    color: gold;
+  }
+  /* .menu.hover para el js */
+  .menu.hover .dropdown,
+  .menu:hover .dropdown{
+    display: block;
+  }
+
+/* ___________________pagina principal___________________ */
+.section1 img {
+  width: 100%
+}
+.inicio p{
+  font-family:'Times New Roman', Times, serif;
+}
+.inicio p:first-of-type:first-letter {	
+  color: goldenrod;
+  initial-letter: 3; 
+}
+
+/* ___________________pagina libros recomendados___________________ */
+.libros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 1rem;
+}
+  .libros article{
+    padding: 1rem;
+  }  
+  .libros article:first-child{
+    padding-left: 0;
+  }
+  .libros article:last-child{
+    padding-right: 0;
+  }
+  .libros h3{
+    height: 4rem;
+  }
+  .libros img {
+    width: 100%;
+    height: 22rem;
+  }
+
+/* ___________________footer___________________ */
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.68) 34%, rgba(0, 0, 0, 0) 100%);
+  margin-top: 20px;
+}
+
+
+/* ___________________formulario___________________ */
+form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+button[type="submit"] {
+  padding: 0.8rem 1rem;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 7rem;
+}
+button[type="submit"]:hover {
+  background-color: #2d73e6;
+}
+
+/* Estilos para los errores */
+/* .error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+} */
+
+/* ___________________carrusel de imagenes___________________ */
+#carrusel .visible {
+  display: block;
+}
+#carrusel .invisible {
+  display: none;
+}
+#carrusel img{
+  width: auto;
+}
+#carrusel button{
+  padding: 0.4rem 1rem;
+  background-color:gold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 3rem;
+}
+#carrusel button:hover{
+  background-color: rgb(224, 193, 17);
+}
+
+/* ___________________pagina responsive___________________ */
+@media only screen and (max-width: 768px) {
+  .libros {   
+    grid-template-columns: 1fr 1fr;
+  }
+  .libros h3{
+    height: 50px;
+    font-size: 1rem;
+  }
+  .libros h4{
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .libros {   
+    grid-template-columns: 1fr;
+  }
+  .libros h3{    
+    font-size: 0.7rem;
+  }
+}
